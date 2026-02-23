@@ -18,10 +18,16 @@ public class SpiralMatrix {
                }
                //bottom
                for(int j=endcolumn-1;j>=startcolumn;j--){
+                 if(startrow==endrow){
+                    break;
+                 }
                 System.out.print(matrix[endrow][j]+" ");
                }
                //left
                for(int i=endrow-1;i>=startrow+1;i--){
+                if(startcolumn==endcolumn){
+                    break;
+                 }
                 System.out.print(matrix[i][startcolumn]+" ");
                }
                startrow++;
@@ -35,7 +41,7 @@ public class SpiralMatrix {
         int[][] matrix = {{1,2,3,4},
                          {5,6,7,8},
                          {9,10,11,12},
-                         {13,14,15,16}};
+                         };
         Sprialmatrix(matrix);                 
     }
     
